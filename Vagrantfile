@@ -61,8 +61,10 @@ Vagrant.configure("2") do |config|
   # end
   #
   
-  #Run provision.sh
-  config.vm.provision :shell, :path => "provision.sh"  
+  #Run shells
+  config.vm.provision :shell, :path => "provision.sh"
+  
+  config.vm.provision :shell, :path => "packageinstall.sh"  
   
   # View the documentation for the provider you are using for more
   # information on available options.
