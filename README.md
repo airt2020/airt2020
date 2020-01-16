@@ -20,3 +20,12 @@ echo $PATH
 cd /path/to/airt2020
 vagrant provision
 ```
+
+### Useful Commands
+---
+
+1. ゲストへのSSH接続を終了する
+```
+vagrant exit
+```
+
