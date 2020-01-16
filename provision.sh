@@ -1,10 +1,8 @@
 ###Install Python 3.7###
-
 #Use SCL
-sudo yum -y install centos-release-scl
-sudo yum -y install rh-python36
-sudo scl enable rh-python36 bash
-
+sudo yum -y install centos-release-scl;
+sudo yum -y install rh-python36;
+sudo scl enable rh-python36 bash;
 #Set rh-python36 into PATH
 sudo echo 'check if root directory of python3 exists in PATH'
 if [ "`echo $PATH | grep "rh-python36"`" ]; then echo "FOUND"; else echo "export PATH="/opt/rh/rh-python36/root/bin:/usr/bin:/usr/sbin"" >> ~/.bash_profile; fi
