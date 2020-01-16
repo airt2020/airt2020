@@ -1,3 +1,8 @@
 requirement_tmp.txt
 .vagrant/*
 .DS_Store
+venv
+*.pyc
+staticfiles
+.env
+*.sqlite3
