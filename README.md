@@ -11,14 +11,12 @@ vagrant up
 2. 環境変数が正しく設定してあるか確認する。
 
 ```
+vagrant ssh 
 echo $PATH
 ```
 
 `/opt/rh/rh-python36/root/usr/bin`が＄PATHに無い場合、以下を実行。
 ```
 cd /path/to/airt2020
-vagrant ssh
-cd /vagrant
-bash provision.sh
-bash packageinstall.sh
+vagrant provision
 ```
