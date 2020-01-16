@@ -34,10 +34,9 @@ if [ "`sqlite3 --version | grep "3.7"`" ]; then
 	sudo make install
 	sudo mv /usr/bin/sqlite3 /usr/bin/sqlite3_old
 	sudo ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3
-	echo "export LD_LIBRARY_PATH="/usr/local/lib"" >> ~/.bashshrc
-	source ~/.bashshrc;	
+	echo "export LD_LIBRARY_PATH="/usr/local/lib"" >> ~/.bashshrc;	
 fi
-
+source ~/.bashshrc;
 
 #Install GCC
 sudo yum -y install gcc;
