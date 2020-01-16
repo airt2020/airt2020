@@ -1,14 +1,21 @@
 ### Setup Guidelines
 ---
 
-1. airt2020フォルダへ移り、`vagrant up`で仮想環境を構築
+1. airt2020フォルダへ移り、vbguestをローカルにインストール
 
 ```
 cd /path/to/airt2020
+vagrant plugin install vagrant-vbguest
+```
+
+2. `vagrant up`で仮想環境を構築
+
+```
 vagrant up
 ```
 
-2. 環境変数が正しく設定してあるか確認する。
+
+3. 環境変数が正しく設定してあるか確認する。
 
 ```
 vagrant ssh 
