@@ -14,8 +14,14 @@ source ~/.bash_profile
 #Install Postgresql
 sudo yum -y install postgresql-devel
 
+##upgrade yum
+sudo yum -y upgrade
+
+#Install sqlite 3.29
+if [ "`sqlite3 --version | grep "3.7"`" ]; then wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz; fi
+
 #Install GCC
-yum -y install gcc
+sudo yum -y install gcc
 
 ###Install Python 3.7###
 
@@ -29,7 +35,6 @@ sudo yum install epel-release
 
 #Install Pip
 sudo yum -y install python-pip
-pip install --upgrade pip
 sudo yum install python-virtualenv
 
 #Start MySQL when vagrant is up
