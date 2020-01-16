@@ -23,7 +23,18 @@ sudo yum -y install wget;
 ##upgrade yum
 sudo yum -y upgrade;
 #Install sqlite 3.29
-if [ "`sqlite3 --version | grep "3.7"`" ]; then wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz; fi
+if [ "`sqlite3 --version | grep "3.7"`" ]; then 
+	wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz
+	tar xvfz sqlite-autoconf-3290000.tar.gz
+	rm -f *.tar.gz*
+	cd sqlite-autoconf-3290000
+	./configure --prefix=/usr/local
+	make
+	sudo make install
+	sudo mv /usr/bin/sqlite3 /usr/bin/sqlite3_old
+	sudo ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3;	
+fi
+
 
 #Install GCC
 sudo yum -y install gcc;
