@@ -1,6 +1,6 @@
 #Set rh-python36 into PATH
 sudo echo 'check if root directory of python3 exists in PATH'
-if [ "`echo $PATH | grep "rh-python36"`" ]; then echo "FOUND"; else echo "export PATH="/opt/rh/rh-python36/root/bin:/usr/bin"" >> ~/.bash_profile; fi
+if [ "`echo $PATH | grep "rh-python36"`" ]; then echo "FOUND"; else echo "export PATH="/opt/rh/rh-python36/root/bin:/usr/bin:/usr/sbin"" >> ~/.bash_profile; fi
 
 source ~/.bash_profile
 
