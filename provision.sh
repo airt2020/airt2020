@@ -15,20 +15,23 @@ source ~/.bash_profile
 #sudo yum -y install mysql-community-server
 
 #Install Postgresql
-sudo yum -y install postgresql-devel
+sudo yum -y install postgresql-devel;
+
+#Install wget
+sudo yum -y install wget;
 
 ##upgrade yum
-sudo yum -y upgrade
+sudo yum -y upgrade;
 #Install sqlite 3.29
 if [ "`sqlite3 --version | grep "3.7"`" ]; then wget https://www.sqlite.org/2019/sqlite-autoconf-3290000.tar.gz; fi
 
 #Install GCC
-sudo yum -y install gcc
+sudo yum -y install gcc;
 #Install Extra Packages for Enterprise Linux since lentos does not recognise pip by default
-sudo yum -y install epel-release
+sudo yum -y install epel-release;
 #Install Pip
-sudo yum -y install python-pip
-sudo yum -y install python-virtualenv
+sudo yum -y install python-pip;
+sudo yum -y install python-virtualenv;
 #Start MySQL when vagrant is up
 #sudo systemctl enable mysqld.service
 #sudo systemctl start mysqld.service
