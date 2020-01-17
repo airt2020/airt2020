@@ -8,7 +8,7 @@ sudo echo 'check if root directory of python3 exists in PATH'
 if [ "`echo $PATH | grep "rh-python36"`" ]; then echo "FOUND"; else echo "export PATH="/opt/rh/rh-python36/root/bin:/usr/bin:/usr/sbin"" >> ~/.bash_profile; fi
 source ~/.bash_profile
 
-##to check file location, run `which [package name]`
+##To check file location, run `which [package name]`
 ##PATH is set as `/usr/bin` by default. To change the setting, edit ~/.bash_profile
 
 # Install MySQL
@@ -36,6 +36,7 @@ if [ "`sqlite3 --version | grep "3.7"`" ]; then
 	sudo ln -s /usr/local/bin/sqlite3 /usr/bin/sqlite3
 	echo "export LD_LIBRARY_PATH="/usr/local/lib"" >> ~/.bashshrc;	
 fi
+#Load sqlite 3.29
 source ~/.bashshrc;
 
 #Install GCC

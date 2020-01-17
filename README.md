@@ -28,6 +28,17 @@ cd /path/to/airt2020
 vagrant provision
 ```
 
+4. Djangoアプリを起動する
+```
+vagrant ssh
+cd /vagrant
+python manage.py runserver 0:8000
+
+```
+
+`http://192.168.33.11:8000/`にホストからアクセスできたら成功。
+
+
 ### Useful Commands
 ---
 
